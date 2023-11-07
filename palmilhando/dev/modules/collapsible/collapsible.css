@@ -1,0 +1,61 @@
+[data-collapsible=body] {
+    list-style: none;
+    padding: 0
+}
+[data-component=collapsible] {
+    backface-visibility: hidden;
+    background-color: var(--cor2);
+    background-image: var(--boxBg);
+    border-radius: 12px;
+    border-top: 1px solid var(--white);
+    box-shadow: var(--shadow3d);
+    cursor: pointer;
+    margin: .5rem 0;
+    max-height: 2.5rem;
+    overflow-y: hidden;
+    padding: .5rem 1rem;
+    transition: .3s ease-out
+}
+[data-component=collapsible]:hover {
+    box-shadow: none;
+    filter: brightness(95%);
+    transform: translateY(2px)
+}
+[data-component=collapsible].active {
+    box-shadow: var(--shadow3d);
+    filter: brightness(100%);
+    transform: translateY(2px)
+}
+[data-component=collapsible].active [data-collapsible=title]:after {
+    transform: rotate(90deg)
+}
+[data-collapsible=title] {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding-right: 2rem;
+    position: relative
+}
+[data-collapsible=title]:after {
+    background: url(https://cdn.palmilhando.com.br/media/img/svg/caret-light.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    height: 1rem;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .25s ease-out;
+    width: 1rem
+}
+[data-collapsible=content] {
+    margin: 0;
+    max-width: 80%;
+    padding: 1.5rem 0 1rem
+}
+@media screen and (max-width: 820px) {
+    [data-component=collapsible] {
+        max-height: 5.5rem
+    }
+}

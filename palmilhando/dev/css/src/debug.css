@@ -1,0 +1,40 @@
+[debug-view=true] section {
+    background-color: rgb(100, 149, 237, 0.25);
+}
+[debug-view=true] div {
+    background-color: rgb(143, 188, 143, 0.25);
+}
+[debug-view=true] *:not(.div-name) {
+    border: dashed 2px rgb(220, 20, 60, 0.25);
+    mix-blend-mode: normal;
+}
+[debug-view=true] .div-name {
+    color: rgb(220, 20, 60);
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: white;
+    width: fit-content;
+    padding: 6px;
+}
+[debug-view=true] .test-container {
+    width: 240px;
+    aspect-ratio: 1;
+    margin: auto;
+}
+.div-name:not([debug-view=true] .div-name) {display: none;}
+#debug-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: rgb(220, 20, 60);
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: white;
+    width: fit-content;
+    padding: 6px;
+    border: dashed 2px rgb(220, 20, 60, 0.25);
+    cursor: pointer;
+    z-index: 999;
+    user-select: none;
+}

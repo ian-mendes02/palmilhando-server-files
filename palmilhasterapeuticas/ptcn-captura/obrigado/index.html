@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palmilhas Terapêuticas: da Ciência ao Negócio | Obrigado!</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../public/img/logo-ptcn-icone-default.ico">
+    <style>
+      .bg-img {
+        position: fixed;
+        top: 0;
+        right: 2.5%;
+        height: 100vh;
+        opacity: 0.5;
+        z-index: 1;
+        filter: blur(3px);
+      }
+
+      .header {
+        width: 100%;
+        z-index: 3;
+      }
+
+      .header strong {
+        font-size: 3rem;
+        margin: 12px;
+        color: var(--colorAccent);
+      }
+
+      .header .my-button {
+        padding: 2%;
+        background-color: rgb(37, 211, 101);
+        background-image: none;
+        width: 80%;
+        margin: 24px 0;
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      .header .container {
+        margin: 2% 0;
+        width: 70%;
+      }
+
+      .header h3 {
+        opacity: 0.8;
+      }
+
+      .header h3 a {
+        text-decoration: underline;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .header img {
+        width: 512px;
+        transform: translateX(-7.5%);
+      }
+
+      .my-button img {
+        margin: 0 6px;
+        display: inline;
+        transform: translateY(15%);
+        width: 32px;
+      }
+
+      .footer {
+        text-align: center;
+        background-color: #1b1b1c;
+      }
+
+      .footer .wrapper {
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .my-button img {
+          width: 32px;
+          margin: 0 6px;
+          display: inline;
+          transform: translateY(15%);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .bg-img {
+          position: fixed;
+          top: 0;
+          left: 50%;
+          right: 0;
+          transform: translateX(-50%);
+          width: 100vw;
+          height: auto;
+          opacity: 0.5;
+          filter: blur(5px);
+          z-index: 1;
+        }
+
+        .header .content-default {
+          align-items: center;
+        }
+
+        .header h2 {
+          font-size: 1.25rem;
+        }
+
+        .header h2 strong {
+          font-size: 1.8rem;
+        }
+
+        .header .container {
+          margin: 12px;
+          width: 100%;
+        }
+
+        .header img {
+          width: 100%;
+          transform: translateX(0);
+        }
+
+        .header .my-button {
+          width: 100%;
+          font-size: 1.25rem;
+          padding: 24px 0;
+        }
+
+        .my-button img {
+          width: 18px;
+          margin: 0 6px;
+          display: inline;
+          transform: translateY(15%);
+        }
+      }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5TTGRP4');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    
+    <img src="" draggable="false" class="bg-img" id="bg-img">
+
+    <section class="header">
+      <div class="content">
+        <div class="content-default">
+          <div class="container">
+            <img src="../public/img/logo-ptcn-4.png" draggable="false">
+          </div>
+          <div class="container">
+            <h1 class="accent-color">Falta pouco para concluir sua inscrição.</h1><br>
+            <h3>Agradecemos sua participação! Agora, siga os passos a seguir para finalizar o seu cadastro:</h3>
+          </div>
+          <div class="container">
+            <h2><strong>1.</strong>Abra o e-mail que te enviamos e siga as orientações.</h2>
+            <br>
+            <h2><strong>2.</strong>Clique no botão abaixo para entrar no<mark class="accent-color"> grupo de WhatsApp</mark> e receber informações e materiais complementares do evento.</h2>
+            <a href="https://devzapp.com.br/api-engennier/campanha/api/redirect/6533eed4ca1127000134fe51"><button class="my-button">QUERO ENTRAR NO GRUPO <img src="../public/img/svg/whatsapp.svg" draggable="false"></button></a>
+          </div>
+          <div class="container">
+            <h3>
+              Obs: Caso não tenha recebido o e-mail na sua caixa de entrada, verifique na sua caixa de spam ou lixo eletrônico. <br>
+              Caso não tenha recebido o e-mail em até 15 minutos, você pode clicar <a onclick="voltarPagina()">aqui</a> para efetuar o seu cadastro novamente.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TTGRP4"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+      var index = localStorage.getItem("pageID");
+      function voltarPagina() {
+        document.location = "../index_" + index + ".html";
+      }
+      let bgPath;
+      if (index == 1 || index == 4) {
+        bgPath = 1
+      } else if (index == 2 || index == 5) {
+        bgPath = 2
+      } else if (index == 3 || index == 6) {
+        bgPath = 3
+      };
+      document.getElementById("bg-img").setAttribute("src", "../public/img/foto-capa-" + bgPath + ".png")
+    </script>
+
+
+  </body>
+
+</html>

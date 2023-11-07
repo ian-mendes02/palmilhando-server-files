@@ -1,0 +1,18 @@
+{
+    "manu": {
+        "login": "emanuelle.zocolloto@gmail.com",
+        "password": "podal@manu"
+    },
+    "mari": {
+        "login": "marianapereiracopy@gmail.com",
+        "password": "podal@mari"
+    },
+    "andre": {
+        "login": "",
+        "password": "podal@andre"
+    },
+    "ian": {
+        "login": "ianlucamendes02@gmail.com",
+        "password": "podal@ian"
+    }
+}
